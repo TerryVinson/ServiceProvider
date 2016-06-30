@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<topology xmlns="http://www.cisco.com/VIRL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="0.9" xsi:schemaLocation="http://www.cisco.com/VIRL https://raw.github.com/CiscoVIRL/schema/v0.9/virl.xsd">
+  <extensions>
+    <entry key="management_network" type="String">user</entry>
+  </extensions>
+  <node location="128,182" type="SIMPLE" subtype="CSR1000v" name="CSR3">
+    <extensions>
+      <entry key="config" type="string"/>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet2" id="0"/>
+    <interface name="GigabitEthernet3" id="1"/>
+    <interface name="GigabitEthernet4" id="2"/>
+  </node>
+  <node location="277,319" type="SIMPLE" subtype="CSR1000v" name="CSR1">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet2" id="0"/>
+    <interface name="GigabitEthernet3" id="1"/>
+    <interface name="GigabitEthernet4" id="2"/>
+    <interface name="GigabitEthernet5" id="3"/>
+    <interface name="GigabitEthernet6" id="4"/>
+    <interface name="GigabitEthernet7" id="5"/>
+    <interface name="GigabitEthernet8" id="6"/>
+    <interface name="GigabitEthernet9" id="7"/>
+    <interface name="GigabitEthernet10" id="8"/>
+  </node>
+  <node location="725,319" type="SIMPLE" subtype="CSR1000v" name="CSR2">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet2" id="0"/>
+    <interface name="GigabitEthernet3" id="1"/>
+    <interface name="GigabitEthernet4" id="2"/>
+    <interface name="GigabitEthernet5" id="3"/>
+    <interface name="GigabitEthernet6" id="4"/>
+    <interface name="GigabitEthernet7" id="5"/>
+    <interface name="GigabitEthernet8" id="6"/>
+    <interface name="GigabitEthernet9" id="7"/>
+  </node>
+  <node location="128,254" type="SIMPLE" subtype="CSR1000v" name="CSR4">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet2" id="0"/>
+    <interface name="GigabitEthernet3" id="1"/>
+    <interface name="GigabitEthernet4" id="2"/>
+    <interface name="GigabitEthernet5" id="3"/>
+  </node>
+  <node location="128,319" type="SIMPLE" subtype="CSR1000v" name="CSR5">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet2" id="0"/>
+    <interface name="GigabitEthernet3" id="1"/>
+    <interface name="GigabitEthernet4" id="2"/>
+    <interface name="GigabitEthernet5" id="3"/>
+  </node>
+  <node location="871,182" type="SIMPLE" subtype="CSR1000v" name="CSR6">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet2" id="0"/>
+    <interface name="GigabitEthernet3" id="1"/>
+    <interface name="GigabitEthernet4" id="2"/>
+  </node>
+  <node location="871,254" type="SIMPLE" subtype="CSR1000v" name="CSR7">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet2" id="0"/>
+    <interface name="GigabitEthernet3" id="1"/>
+    <interface name="GigabitEthernet4" id="2"/>
+    <interface name="GigabitEthernet5" id="3"/>
+  </node>
+  <node location="871,319" type="SIMPLE" subtype="CSR1000v" name="CSR8">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet2" id="0"/>
+    <interface name="GigabitEthernet3" id="1"/>
+    <interface name="GigabitEthernet4" id="2"/>
+  </node>
+  <node location="496,101" type="SIMPLE" subtype="IOS XRv" name="XRV1">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet0/0/0/0" id="0"/>
+    <interface name="GigabitEthernet0/0/0/1" id="1"/>
+    <interface name="GigabitEthernet0/0/0/2" id="2"/>
+    <interface name="GigabitEthernet0/0/0/3" id="3"/>
+    <interface name="GigabitEthernet0/0/0/4" id="4"/>
+    <interface name="GigabitEthernet0/0/0/5" id="5"/>
+    <interface name="GigabitEthernet0/0/0/6" id="6"/>
+    <interface name="GigabitEthernet0/0/0/7" id="7"/>
+  </node>
+  <node location="277,182" type="SIMPLE" subtype="IOS XRv" name="XRV2">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet0/0/0/0" id="0"/>
+    <interface name="GigabitEthernet0/0/0/1" id="1"/>
+    <interface name="GigabitEthernet0/0/0/2" id="2"/>
+    <interface name="GigabitEthernet0/0/0/3" id="3"/>
+    <interface name="GigabitEthernet0/0/0/4" id="4"/>
+    <interface name="GigabitEthernet0/0/0/5" id="5"/>
+    <interface name="GigabitEthernet0/0/0/6" id="6"/>
+    <interface name="GigabitEthernet0/0/0/7" id="7"/>
+  </node>
+  <node location="387,182" type="SIMPLE" subtype="IOS XRv" name="XRV3">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet0/0/0/0" id="0"/>
+    <interface name="GigabitEthernet0/0/0/1" id="1"/>
+    <interface name="GigabitEthernet0/0/0/2" id="2"/>
+    <interface name="GigabitEthernet0/0/0/3" id="3"/>
+    <interface name="GigabitEthernet0/0/0/4" id="4"/>
+    <interface name="GigabitEthernet0/0/0/5" id="5"/>
+    <interface name="GigabitEthernet0/0/0/6" id="6"/>
+    <interface name="GigabitEthernet0/0/0/7" id="7"/>
+  </node>
+  <node location="610,182" type="SIMPLE" subtype="IOS XRv" name="XRV4">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet0/0/0/0" id="0"/>
+    <interface name="GigabitEthernet0/0/0/1" id="1"/>
+    <interface name="GigabitEthernet0/0/0/2" id="2"/>
+    <interface name="GigabitEthernet0/0/0/3" id="3"/>
+    <interface name="GigabitEthernet0/0/0/4" id="4"/>
+    <interface name="GigabitEthernet0/0/0/5" id="5"/>
+    <interface name="GigabitEthernet0/0/0/6" id="6"/>
+    <interface name="GigabitEthernet0/0/0/7" id="7"/>
+  </node>
+  <node location="725,182" type="SIMPLE" subtype="IOS XRv" name="XRV5">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet0/0/0/0" id="0"/>
+    <interface name="GigabitEthernet0/0/0/1" id="1"/>
+    <interface name="GigabitEthernet0/0/0/2" id="2"/>
+    <interface name="GigabitEthernet0/0/0/3" id="3"/>
+    <interface name="GigabitEthernet0/0/0/4" id="4"/>
+    <interface name="GigabitEthernet0/0/0/5" id="5"/>
+    <interface name="GigabitEthernet0/0/0/6" id="6"/>
+    <interface name="GigabitEthernet0/0/0/7" id="7"/>
+  </node>
+  <node location="387,319" type="SIMPLE" subtype="IOS XRv" name="XRV6">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet0/0/0/0" id="0"/>
+    <interface name="GigabitEthernet0/0/0/1" id="1"/>
+    <interface name="GigabitEthernet0/0/0/2" id="2"/>
+    <interface name="GigabitEthernet0/0/0/3" id="3"/>
+    <interface name="GigabitEthernet0/0/0/4" id="4"/>
+    <interface name="GigabitEthernet0/0/0/5" id="5"/>
+    <interface name="GigabitEthernet0/0/0/6" id="6"/>
+    <interface name="GigabitEthernet0/0/0/7" id="7"/>
+  </node>
+  <node location="610,319" type="SIMPLE" subtype="IOS XRv" name="XRV7">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet0/0/0/0" id="0"/>
+    <interface name="GigabitEthernet0/0/0/1" id="1"/>
+    <interface name="GigabitEthernet0/0/0/2" id="2"/>
+    <interface name="GigabitEthernet0/0/0/3" id="3"/>
+    <interface name="GigabitEthernet0/0/0/4" id="4"/>
+    <interface name="GigabitEthernet0/0/0/5" id="5"/>
+    <interface name="GigabitEthernet0/0/0/6" id="6"/>
+    <interface name="GigabitEthernet0/0/0/7" id="7"/>
+  </node>
+  <node location="496,401" type="SIMPLE" subtype="IOS XRv" name="XRV8">
+    <extensions>
+      <entry key="AutoNetkit.ASN" type="Integer">1</entry>
+    </extensions>
+    <interface name="GigabitEthernet0/0/0/0" id="0"/>
+    <interface name="GigabitEthernet0/0/0/1" id="1"/>
+    <interface name="GigabitEthernet0/0/0/2" id="2"/>
+    <interface name="GigabitEthernet0/0/0/3" id="3"/>
+    <interface name="GigabitEthernet0/0/0/4" id="4"/>
+    <interface name="GigabitEthernet0/0/0/5" id="5"/>
+    <interface name="GigabitEthernet0/0/0/6" id="6"/>
+    <interface name="GigabitEthernet0/0/0/7" id="7"/>
+  </node>
+  <connection src="/virl:topology/virl:node[16]/virl:interface[1]" dst="/virl:topology/virl:node[14]/virl:interface[6]"/>
+  <connection src="/virl:topology/virl:node[16]/virl:interface[2]" dst="/virl:topology/virl:node[15]/virl:interface[6]"/>
+  <connection src="/virl:topology/virl:node[1]/virl:interface[1]" dst="/virl:topology/virl:node[10]/virl:interface[2]"/>
+  <connection src="/virl:topology/virl:node[1]/virl:interface[2]" dst="/virl:topology/virl:node[2]/virl:interface[5]"/>
+  <connection src="/virl:topology/virl:node[1]/virl:interface[3]" dst="/virl:topology/virl:node[4]/virl:interface[3]"/>
+  <connection src="/virl:topology/virl:node[8]/virl:interface[1]" dst="/virl:topology/virl:node[3]/virl:interface[2]"/>
+  <connection src="/virl:topology/virl:node[8]/virl:interface[2]" dst="/virl:topology/virl:node[13]/virl:interface[5]"/>
+  <connection src="/virl:topology/virl:node[3]/virl:interface[1]" dst="/virl:topology/virl:node[15]/virl:interface[1]"/>
+  <connection src="/virl:topology/virl:node[3]/virl:interface[7]" dst="/virl:topology/virl:node[16]/virl:interface[4]"/>
+  <connection src="/virl:topology/virl:node[7]/virl:interface[1]" dst="/virl:topology/virl:node[13]/virl:interface[6]"/>
+  <connection src="/virl:topology/virl:node[7]/virl:interface[2]" dst="/virl:topology/virl:node[3]/virl:interface[6]"/>
+  <connection src="/virl:topology/virl:node[7]/virl:interface[4]" dst="/virl:topology/virl:node[8]/virl:interface[3]"/>
+  <connection src="/virl:topology/virl:node[4]/virl:interface[1]" dst="/virl:topology/virl:node[10]/virl:interface[6]"/>
+  <connection src="/virl:topology/virl:node[4]/virl:interface[2]" dst="/virl:topology/virl:node[2]/virl:interface[6]"/>
+  <connection src="/virl:topology/virl:node[4]/virl:interface[4]" dst="/virl:topology/virl:node[5]/virl:interface[3]"/>
+  <connection src="/virl:topology/virl:node[6]/virl:interface[1]" dst="/virl:topology/virl:node[13]/virl:interface[2]"/>
+  <connection src="/virl:topology/virl:node[6]/virl:interface[2]" dst="/virl:topology/virl:node[3]/virl:interface[5]"/>
+  <connection src="/virl:topology/virl:node[6]/virl:interface[3]" dst="/virl:topology/virl:node[7]/virl:interface[3]"/>
+  <connection src="/virl:topology/virl:node[10]/virl:interface[1]" dst="/virl:topology/virl:node[11]/virl:interface[1]"/>
+  <connection src="/virl:topology/virl:node[10]/virl:interface[3]" dst="/virl:topology/virl:node[2]/virl:interface[3]"/>
+  <connection src="/virl:topology/virl:node[10]/virl:interface[4]" dst="/virl:topology/virl:node[14]/virl:interface[5]"/>
+  <connection src="/virl:topology/virl:node[10]/virl:interface[7]" dst="/virl:topology/virl:node[9]/virl:interface[3]"/>
+  <connection src="/virl:topology/virl:node[10]/virl:interface[8]" dst="/virl:topology/virl:node[2]/virl:interface[9]"/>
+  <connection src="/virl:topology/virl:node[9]/virl:interface[1]" dst="/virl:topology/virl:node[11]/virl:interface[6]"/>
+  <connection src="/virl:topology/virl:node[9]/virl:interface[2]" dst="/virl:topology/virl:node[12]/virl:interface[6]"/>
+  <connection src="/virl:topology/virl:node[9]/virl:interface[6]" dst="/virl:topology/virl:node[15]/virl:interface[7]"/>
+  <connection src="/virl:topology/virl:node[9]/virl:interface[7]" dst="/virl:topology/virl:node[16]/virl:interface[7]"/>
+  <connection src="/virl:topology/virl:node[9]/virl:interface[8]" dst="/virl:topology/virl:node[16]/virl:interface[8]"/>
+  <connection src="/virl:topology/virl:node[5]/virl:interface[1]" dst="/virl:topology/virl:node[2]/virl:interface[2]"/>
+  <connection src="/virl:topology/virl:node[5]/virl:interface[2]" dst="/virl:topology/virl:node[10]/virl:interface[5]"/>
+  <connection src="/virl:topology/virl:node[5]/virl:interface[4]" dst="/virl:topology/virl:node[2]/virl:interface[8]"/>
+  <connection src="/virl:topology/virl:node[11]/virl:interface[2]" dst="/virl:topology/virl:node[12]/virl:interface[2]"/>
+  <connection src="/virl:topology/virl:node[11]/virl:interface[3]" dst="/virl:topology/virl:node[14]/virl:interface[3]"/>
+  <connection src="/virl:topology/virl:node[11]/virl:interface[4]" dst="/virl:topology/virl:node[15]/virl:interface[4]"/>
+  <connection src="/virl:topology/virl:node[11]/virl:interface[5]" dst="/virl:topology/virl:node[2]/virl:interface[4]"/>
+  <connection src="/virl:topology/virl:node[11]/virl:interface[7]" dst="/virl:topology/virl:node[16]/virl:interface[5]"/>
+  <connection src="/virl:topology/virl:node[11]/virl:interface[8]" dst="/virl:topology/virl:node[14]/virl:interface[8]"/>
+  <connection src="/virl:topology/virl:node[13]/virl:interface[1]" dst="/virl:topology/virl:node[12]/virl:interface[1]"/>
+  <connection src="/virl:topology/virl:node[13]/virl:interface[3]" dst="/virl:topology/virl:node[3]/virl:interface[3]"/>
+  <connection src="/virl:topology/virl:node[13]/virl:interface[4]" dst="/virl:topology/virl:node[15]/virl:interface[5]"/>
+  <connection src="/virl:topology/virl:node[13]/virl:interface[7]" dst="/virl:topology/virl:node[9]/virl:interface[4]"/>
+  <connection src="/virl:topology/virl:node[13]/virl:interface[8]" dst="/virl:topology/virl:node[3]/virl:interface[8]"/>
+  <connection src="/virl:topology/virl:node[14]/virl:interface[2]" dst="/virl:topology/virl:node[15]/virl:interface[2]"/>
+  <connection src="/virl:topology/virl:node[14]/virl:interface[7]" dst="/virl:topology/virl:node[9]/virl:interface[5]"/>
+  <connection src="/virl:topology/virl:node[2]/virl:interface[1]" dst="/virl:topology/virl:node[14]/virl:interface[1]"/>
+  <connection src="/virl:topology/virl:node[2]/virl:interface[7]" dst="/virl:topology/virl:node[16]/virl:interface[3]"/>
+  <connection src="/virl:topology/virl:node[12]/virl:interface[3]" dst="/virl:topology/virl:node[15]/virl:interface[3]"/>
+  <connection src="/virl:topology/virl:node[12]/virl:interface[4]" dst="/virl:topology/virl:node[14]/virl:interface[4]"/>
+  <connection src="/virl:topology/virl:node[12]/virl:interface[5]" dst="/virl:topology/virl:node[3]/virl:interface[4]"/>
+  <connection src="/virl:topology/virl:node[12]/virl:interface[7]" dst="/virl:topology/virl:node[16]/virl:interface[6]"/>
+  <connection src="/virl:topology/virl:node[12]/virl:interface[8]" dst="/virl:topology/virl:node[15]/virl:interface[8]"/>
+</topology>
