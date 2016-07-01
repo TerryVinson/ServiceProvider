@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<topology xmlns="http://www.cisco.com/VIRL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="0.9" xsi:schemaLocation="http://www.cisco.com/VIRL https://raw.github.com/CiscoVIRL/schema/v0.9/virl.xsd">
+    <node name="XRV1" type="SIMPLE" subtype="IOS XRv" location="101,155">
+        <extensions>
+            <entry key="config" type="String">!! IOS XR Configuration 6.0.1
+!! Last configuration change at Fri Jul  1 16:24:40 2016 by cisco
+!
+hostname XRV1
+cdp
+interface Loopback0
+ ipv4 address 11.11.11.11 255.255.255.255
+ ipv6 address 2001:11:11:11::11/64
+!
+interface MgmtEth0/0/CPU0/0
+ shutdown
+!
+interface GigabitEthernet0/0/0/0
+ cdp
+ ipv4 address 183.3.11.11 255.255.255.0
+ ipv6 address fe80::11 link-local
+ ipv6 address 2001:3:11::11/64
+!
+interface GigabitEthernet0/0/0/1
+ cdp
+ ipv4 address 183.11.12.11 255.255.255.0
+ ipv6 address fe80::11 link-local
+ ipv6 address 2001:11:12::11/64
+!
+interface GigabitEthernet0/0/0/2
+ shutdown
+!
+end</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/0/0/0"/>
+        <interface id="1" name="GigabitEthernet0/0/0/1"/>
+        <interface id="2" name="GigabitEthernet0/0/0/2"/>
+    </node>
+    <node name="XRV2" type="SIMPLE" subtype="IOS XRv" location="105,296">
+        <extensions>
+            <entry key="config" type="String">!! IOS XR Configuration 6.0.1
+!! Last configuration change at Fri Jul  1 17:14:34 2016 by cisco
+!
+hostname XRV2
+cdp
+interface Loopback0
+ ipv4 address 12.12.12.12 255.255.255.255
+ ipv6 address 2001:12:12:12::12/64
+!
+interface MgmtEth0/0/CPU0/0
+ shutdown
+!
+interface GigabitEthernet0/0/0/0
+ cdp
+ ipv4 address 183.4.12.12 255.255.255.0
+ ipv6 address fe80::12 link-local
+ ipv6 address 2001:4:12::12/64
+!
+interface GigabitEthernet0/0/0/1
+ cdp
+ ipv4 address 183.11.12.12 255.255.255.0
+ ipv6 address fe80::12 link-local
+ ipv6 address 2001:11:12::12/64
+!
+interface GigabitEthernet0/0/0/2
+ shutdown
+!
+end</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet0/0/0/0"/>
+        <interface id="1" name="GigabitEthernet0/0/0/1"/>
+        <interface id="2" name="GigabitEthernet0/0/0/2"/>
+    </node>
+    <node name="CSR3" type="SIMPLE" subtype="CSR1000v" location="268,152">
+        <extensions>
+            <entry key="config" type="String">!
+! Last configuration change at 18:11:17 UTC Fri Jul 1 2016
+!
+version 15.6
+service config
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname CSR3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 9A0Q80G23E1
+!
+spanning-tree extend system-id
+!
+!
+redundancy
+!
+!
+!
+!
+!
+cdp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+! 
+! 
+! 
+! 
+!
+!
+interface Loopback0
+ ip address 3.3.3.3 255.255.255.255
+ ipv6 address 2001:3:3:3::3/64
+!
+interface GigabitEthernet1
+ ip address dhcp
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet2
+ ip address 183.3.11.3 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::3 link-local
+ ipv6 address 2001:3:11::3/64
+ cdp enable
+!
+interface GigabitEthernet3
+ ip address 183.3.4.3 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::3 link-local
+ ipv6 address 2001:3:4::3/64
+ cdp enable
+!
+interface GigabitEthernet4
+ ip address 183.3.5.3 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::3 link-local
+ ipv6 address 2001:3:5::3/64
+ cdp enable
+!
+interface GigabitEthernet5
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet6
+ no ip address
+ shutdown
+ negotiation auto
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip tftp source-interface GigabitEthernet1
+!
+!
+!
+!
+!
+control-plane
+!
+ !
+ !
+ !
+ !
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0
+ login
+line vty 1
+ login
+ length 0
+line vty 2 4
+ login
+!
+!
+end</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet2"/>
+        <interface id="1" name="GigabitEthernet3"/>
+        <interface id="2" name="GigabitEthernet4"/>
+        <interface id="3" name="GigabitEthernet5"/>
+        <interface id="4" name="GigabitEthernet6"/>
+    </node>
+    <node name="CSR4" type="SIMPLE" subtype="CSR1000v" location="266,292">
+        <extensions>
+            <entry key="config" type="String">!
+! Last configuration change at 18:11:17 UTC Fri Jul 1 2016
+!
+version 15.6
+service config
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname CSR4
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 9LWJ6050BP5
+!
+spanning-tree extend system-id
+!
+!
+redundancy
+!
+!
+!
+!
+!
+cdp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+! 
+! 
+! 
+! 
+!
+!
+interface Loopback0
+ ip address 4.4.4.4 255.255.255.255
+ ipv6 address 2001:4:4:4::4/64
+!
+interface GigabitEthernet1
+ ip address dhcp
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet2
+ ip address 183.4.12.4 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::4 link-local
+ ipv6 address 2001:4:12::4/64
+ cdp enable
+!
+interface GigabitEthernet3
+ ip address 183.3.4.4 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::4 link-local
+ ipv6 address 2001:3:4::4/64
+ cdp enable
+!
+interface GigabitEthernet4
+ ip address 183.4.6.4 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::4 link-local
+ ipv6 address 2001:4:6::4/64
+ cdp enable
+!
+interface GigabitEthernet5
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet6
+ no ip address
+ shutdown
+ negotiation auto
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip tftp source-interface GigabitEthernet1
+!
+!
+!
+!
+!
+control-plane
+!
+ !
+ !
+ !
+ !
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0
+ login
+line vty 1
+ login
+ length 0
+line vty 2 4
+ login
+!
+!
+end</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet2"/>
+        <interface id="1" name="GigabitEthernet3"/>
+        <interface id="2" name="GigabitEthernet4"/>
+        <interface id="3" name="GigabitEthernet5"/>
+        <interface id="4" name="GigabitEthernet6"/>
+    </node>
+    <node name="CSR5" type="SIMPLE" subtype="CSR1000v" location="459,149">
+        <extensions>
+            <entry key="config" type="String">!
+! Last configuration change at 18:11:18 UTC Fri Jul 1 2016
+!
+version 15.6
+service config
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname CSR5
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 9KGA72BQ18Y
+!
+spanning-tree extend system-id
+!
+!
+redundancy
+!
+!
+!
+!
+!
+cdp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+! 
+! 
+! 
+! 
+!
+!
+interface Loopback0
+ ip address 5.5.5.5 255.255.255.255
+ ipv6 address 2001:5:5:5::5/64
+!
+interface GigabitEthernet1
+ ip address dhcp
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet2
+ ip address 183.3.5.5 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::5 link-local
+ ipv6 address 2001:3:5::5/64
+ cdp enable
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet4
+ no ip address
+ shutdown
+ negotiation auto
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip tftp source-interface GigabitEthernet1
+!
+!
+!
+!
+!
+control-plane
+!
+ !
+ !
+ !
+ !
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0
+ login
+line vty 1
+ login
+ length 0
+line vty 2 4
+ login
+!
+!
+end</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet2"/>
+        <interface id="1" name="GigabitEthernet3"/>
+        <interface id="2" name="GigabitEthernet4"/>
+    </node>
+    <node name="CSR6" type="SIMPLE" subtype="CSR1000v" location="463,291">
+        <extensions>
+            <entry key="config" type="String">!
+! Last configuration change at 18:11:17 UTC Fri Jul 1 2016
+!
+version 15.6
+service config
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname CSR6
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 9KNDEA3324V
+!
+spanning-tree extend system-id
+!
+!
+redundancy
+!
+!
+!
+!
+!
+cdp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+! 
+! 
+! 
+! 
+!
+!
+interface Loopback0
+ ip address 6.6.6.6 255.255.255.255
+ ipv6 address FE80::6 link-local
+ ipv6 address 2001:6:6:6::6/64
+!
+interface GigabitEthernet1
+ ip address dhcp
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet2
+ ip address 183.4.6.6 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::6 link-local
+ ipv6 address 2001:4:6::6/64
+ cdp enable
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet4
+ no ip address
+ shutdown
+ negotiation auto
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+ip tftp source-interface GigabitEthernet1
+!
+!
+!
+!
+!
+control-plane
+!
+ !
+ !
+ !
+ !
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0
+ login
+line vty 1
+ login
+ length 0
+line vty 2 4
+ login
+!
+!
+end</entry>
+        </extensions>
+        <interface id="0" name="GigabitEthernet2"/>
+        <interface id="1" name="GigabitEthernet3"/>
+        <interface id="2" name="GigabitEthernet4"/>
+    </node>
+    <connection dst="/virl:topology/virl:node[3]/virl:interface[1]" src="/virl:topology/virl:node[1]/virl:interface[1]"/>
+    <connection dst="/virl:topology/virl:node[4]/virl:interface[1]" src="/virl:topology/virl:node[2]/virl:interface[1]"/>
+    <connection dst="/virl:topology/virl:node[4]/virl:interface[2]" src="/virl:topology/virl:node[3]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[5]/virl:interface[1]" src="/virl:topology/virl:node[3]/virl:interface[3]"/>
+    <connection dst="/virl:topology/virl:node[6]/virl:interface[1]" src="/virl:topology/virl:node[4]/virl:interface[3]"/>
+    <connection dst="/virl:topology/virl:node[2]/virl:interface[2]" src="/virl:topology/virl:node[1]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[4]/virl:interface[4]" src="/virl:topology/virl:node[1]/virl:interface[3]"/>
+    <connection dst="/virl:topology/virl:node[2]/virl:interface[3]" src="/virl:topology/virl:node[3]/virl:interface[4]"/>
+    <connection dst="/virl:topology/virl:node[6]/virl:interface[2]" src="/virl:topology/virl:node[5]/virl:interface[2]"/>
+    <connection dst="/virl:topology/virl:node[4]/virl:interface[5]" src="/virl:topology/virl:node[5]/virl:interface[3]"/>
+    <connection dst="/virl:topology/virl:node[6]/virl:interface[3]" src="/virl:topology/virl:node[3]/virl:interface[5]"/>
+</topology>
